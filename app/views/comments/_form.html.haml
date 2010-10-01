@@ -1,0 +1,13 @@
+= form_for([@post,@post.comments.build]) do |comment_item|
+	.errors f.error_messages 
+	.field
+		= comment_item.label :commenter
+		%br
+		= comment_item.text_field :commenter 
+	.field
+		= comment_item.label :body
+		%br
+		= comment_item.text_area :body
+	.actions
+		= comment_item.submit
+
