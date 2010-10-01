@@ -8,5 +8,16 @@
 %p
 	%b content
 	= @post.content 
+%h2 add a comment 
+= form_for([@post, @post.comments.build]) do |comment|
+	%h3 comment.error_messages
+	.field
+		= comment.label :commenter
+		= comment.text_field :commenter 
+	.field
+		= comment.label :body
+		= comment.text_area :body
+	.actions 
+		= comment.submit
 = link_to 'edit', edit_post_path (@post)
 = link_to 'back', posts_path 
