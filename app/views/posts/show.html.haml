@@ -1,0 +1,12 @@
+%p#notice= notice 
+%p
+	%b name
+	= @post.name
+%p
+	%b title
+	= @post.title
+%p
+	%b content
+	= @post.content 
+= link_to 'edit', edit_post_path (@post)
+= link_to 'back', posts_path 
