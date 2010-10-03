@@ -10,7 +10,7 @@
 	= @post.content 
 %p
 	%b tags
-	= @post.tags.map { |t| t.name }.join(", ")
+	= join_tags @post
 %h2 comments 
 = render @post.comments
 %h2 add a comment 
