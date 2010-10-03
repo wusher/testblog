@@ -8,6 +8,9 @@
 %p
 	%b content
 	= @post.content 
+%p
+	%b tags
+	= @post.tags.map { |t| t.name }.join(", ")
 %h2 comments 
 = render @post.comments
 %h2 add a comment 
